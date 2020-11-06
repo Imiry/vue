@@ -119,7 +119,7 @@
 <script>
 export default {
   data() {
-    // 验证邮箱的规则
+    // 验证邮箱的规则  自定义校验规则
     var checkEmail = (rule, value, cb) => {
       // 验证邮箱的正则表达式
       const regEmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/
@@ -151,7 +151,7 @@ export default {
         // 当前的页数
         pagenum: 1,
         // 当前每页显示多少条数据
-        pagesize: 2
+        pagesize: 10
       },
       userlist: [],
       total: 0,
@@ -281,7 +281,7 @@ export default {
     },
     // 展示编辑用户的对话框
     async showEditDialog(id) {
-      // console.log(id)
+      // console.log(id)  //通过scope.row.id传过来的ID
       const { data: res } = await this.$http.get('users/' + id)
 
       if (res.meta.status !== 200) {

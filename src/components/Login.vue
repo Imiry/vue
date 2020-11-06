@@ -32,7 +32,7 @@ export default {
       // 这是登录表单的数据绑定对象
       loginForm: {
         username: 'admin',
-        password: '123456'
+        password: 'www.xiaomadagege.cn'
       },
       // 这是表单的验证规则对象
       loginFormRules: {
@@ -44,7 +44,7 @@ export default {
         // 验证密码是否合法
         password: [
           { required: true, message: '请输入登录密码', trigger: 'blur' },
-          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+          { min: 6, max: 30, message: '长度在 6 到 30 个字符', trigger: 'blur' }
         ]
       }
     }
@@ -75,14 +75,15 @@ export default {
 
 <style lang="less" scoped>
 .login_container {
-  background-color: #2b4b6b;
+  background: url('../assets/login_bg.jpg') no-repeat;
+  background-size: cover;
   height: 100%;
 }
 
 .login_box {
-  width: 450px;
+  width: 550px;
   height: 300px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   position: absolute;
   left: 50%;
@@ -99,12 +100,12 @@ export default {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
     img {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #eee;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 }
